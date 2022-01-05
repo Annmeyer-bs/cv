@@ -7,7 +7,7 @@ global $up;
         <aside class="sidebar">
             <div class="sidebar__wrapper">
                 <div class="photos" alt="your">
-                    <img src="<?= $up['photo'] ?>"  alt="">
+                    <img src="<?= $up['photo'] ?>" alt="">
                     <input class="photo" id="ifile" name="photo" type="file"
                            accept=".jpg, .jpeg, .png, .svg" <?= $up['photo'] ?> ><br>
                     <label class="co" for="ifile"></label>
@@ -21,7 +21,7 @@ global $up;
                            value="<?= $up['email'] ?>"><br>
                     <input class="input" name="adress" type="text" placeholder="  Country, City, District"
                            value="<?= $up['adress'] ?>"><br>
-                    <input class="input" name="links" type="text" placeholder="  linkedin.com/username"
+                    <input class="input" name="links" type="text" placeholder="  instagram.com/username"
                            value="<?= $up['links'] ?>"><br>
                 </section>
                 <section class="educations">
@@ -51,12 +51,18 @@ global $up;
             </div>
             <section class="p">
                 <h3 class="hist">Profile</h3>
-                <textarea class="textarea" name="profile" wrap="soft"><?= $up['profile'] ?>
+                <textarea class="textarea" name="profile"
+                          placeholder="Dedicated Web Developer experienced in [top skills.&#10;Developed a [major web development accomplishment or project]. &#10;Enthusiastic about [web development interests]."><?= $up['profile'] ?>
                     </textarea>
             </section>
             <section class="p">
                 <h3 class="hist">Professional experiance</h3>
-                <textarea class="textarea" name="proexp" wrap="soft"><?= $up['proexp'] ?>
+                <textarea class="textarea" name="proexp"
+                          placeholder="Job title, Company Month, Year – Month, Year
+    [Action word] [skill/task] [result/impact]
+    [Action word] [skill/task] [result/impact]
+    [Action word] [skill/task] [result/impact]
+                        "><?= $up['proexp'] ?>
                     </textarea>
             </section>
         </div>

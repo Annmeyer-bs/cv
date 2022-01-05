@@ -1,5 +1,6 @@
 a, a:visited,a:hover{
-    text-decoration: none;color:black;
+    text-decoration: none;
+    color:#323026;
     font-weight: 200;
 }
 
@@ -130,7 +131,6 @@ p{
     height: 32px;
 }
 .container__login form .input {
-    margin-left: 61px;
     width: 255px;
     height: 40px;
 }

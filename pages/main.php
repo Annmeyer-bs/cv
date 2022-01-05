@@ -19,21 +19,28 @@ global $up;
                $url= $up['links'] ;
                $url_get = substr(strrchr($url, "/"), 1);
                ?>
-                <p><a href="<?= $up['links'] ?>" title="Insta"><i class="fa fa-instagram" aria-hidden="true"></i><?=$url_get?></a></p>
+                <p><a href="<?= $up['links'] ?>" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i><?=$url_get?></a></p>
 
             </section>
             <section class="education">
                 <h3>Education</h3>
                 <div class="education">
-                    <p><?= $up['education'] ?></p>
+                    <?php $res=explode(';',$up['education']);
+                    foreach ($res as $elem){
+                        echo   '<p>'.trim($elem).'</p>';
+                    }
+                    ?>
+
                 </div>
             </section>
             <section class="skills">
                 <h3>Skills</h3>
                 <ul class="list">
-                    <li><?= $up['skills'] ?></li>
-                    <li>html</li>
-                    <li>css</li>
+                    <?php $res=explode(',',$up['skills']);
+                    foreach ($res as $elem){
+                        echo   '<li>'.trim($elem).'</li>';
+                    }
+                    ?>
                 </ul>
             </section>
         </div>
